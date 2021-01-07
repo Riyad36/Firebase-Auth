@@ -18,6 +18,19 @@ const AuthProvider = (props) => {
     const login = (email, password)=>{
         return auth.signInWithEmailAndPassword(email,password);
     }
+    const logout = ()=>{
+        return auth.signOut();
+    }
+
+    // const login = (email, password)=>{
+    //     return auth.signInWithEmailAndPassword(email,password);
+    // }
+
+
+
+
+
+
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) =>{
@@ -29,7 +42,7 @@ const AuthProvider = (props) => {
     return (
         <AuthContext.Provider value={{
 
-            currentUser, signup, login
+            currentUser, signup, login, logout
 
         }}>
             {props.children}
