@@ -28,10 +28,9 @@ const Dashboard = () => {
         <Container className='d-flex align-items-center justify-content-center'
             style={{ minHeight: "100vh" }}
         >
-            <div className='w-100'
-                style={{ maxWidth: "400px" }}>
+            <div className='w-100'style={{ maxWidth: "400px" }}>
 
-            </div>
+            
 
             <div>
 
@@ -42,8 +41,13 @@ const Dashboard = () => {
                         {error ? <Alert variant="danger">{JSON.stringify(error)}</Alert> : ""}
                         <strong>Email:</strong>
 
+
+
                         {currentUser.email}
+
+                        <div><p></p></div>
                         <Link to="/update-profile" className='btn btn-primary w-100 mt -3'>Update Profile</Link>
+                        
 
                     </Card.Body>
 
@@ -52,6 +56,7 @@ const Dashboard = () => {
 
                     <Button variant="Link" onClick={handleLogout}>Log Out</Button>
 
+                </div>
                 </div>
                 </div>
         </Container>
