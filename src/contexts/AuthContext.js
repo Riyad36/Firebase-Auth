@@ -22,9 +22,13 @@ const AuthProvider = (props) => {
         return auth.signOut();
     }
 
-    // const login = (email, password)=>{
-    //     return auth.signInWithEmailAndPassword(email,password);
-    // }
+    const updateEmail = (email)=>{
+        return currentUser.updateEmail(email);
+    }
+
+    const updatePassword = (password)=>{
+        return currentUser.updatePassword(password);
+    }
 
 
 
@@ -42,7 +46,7 @@ const AuthProvider = (props) => {
     return (
         <AuthContext.Provider value={{
 
-            currentUser, signup, login, logout
+            currentUser, signup, login, logout, updateEmail, updatePassword 
 
         }}>
             {props.children}
